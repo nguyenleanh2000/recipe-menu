@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Outfit:wght@100..900&family=Young+Serif&display=swap");
+
+@layer global {
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    font-family: "Outfit", Arial, Helvetica, sans-serif;
+    font-size: var(--fs-16);
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin: 0;
+    line-height: 1;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  :root {
+    --spacing-2: 8px;
+    --spacing-3: 12px;
+    --spacing-4: 16px;
+    --spacing-6: 24px;
+    --spacing-8: 32px;
+    --spacing-10: 40px;
+    --spacing-12: 48px;
+    --spacing-32: 128px;
+
+    --ff-young: "Young Serif", serif;
+  }
+}
+
+@layer colors {
+  :root {
+    --color-white: #ffffff;
+    --color-brown-800: #854632;
+    --color-stone-100: #f3e5d7;
+    --color-stone-150: #e3ddd7;
+    --color-stone-600: #5f564d;
+    --color-stone-900: #312e2c;
+    --color-rose-50: #fff7fb;
+    --color-rose-800: #7a284e;
+  }
+}
+
+@layer fonts {
+  :root {
+    --fs-40: 40px;
+    --fs-28: 28px;
+    --fs-20: 20px;
+    --fs-16: 1rem;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100dvh;
+  background-color: var(--color-stone-100);
+
+  padding: var(--spacing-32) var(--spacing-12);
+}
+
+.card {
+  border-radius: var(--spacing-6);
+  background-color: var(--color-white);
+  padding: var(--spacing-10) var(--spacing-10);
+  width: 736px;
+  max-width: 100%;
+}
+
+.card__wallpaper {
+  border-radius: var(--spacing-3);
+  margin-bottom: var(--spacing-10);
+  overflow: hidden;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-8);
+}
+
+.content--title {
+  font-family: var(--ff-young);
+  font-size: var(--fs-40);
+  margin-bottom: var(--spacing-6);
+}
+
+.content--ingredients {
+  color: var(--color-stone-600);
+}
+
+.content__prepation {
+  border-radius: 12px;
+  padding: 24px;
+  background-color: var(--color-rose-50);
+}
+
+.content--prepation--time {
+  font-size: var(--fs-20);
+  color: var(--color-rose-800);
+}

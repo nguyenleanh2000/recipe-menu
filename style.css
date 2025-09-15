@@ -114,6 +114,7 @@
   font-family: var(--ff-young);
   font-size: var(--fs-40);
   margin-bottom: var(--spacing-6);
+  font-weight: 400;
 }
 
 .content__prep {

@@ -48,6 +48,11 @@
 
     --ff-young: "Young Serif", serif;
   }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 @layer colors {
@@ -92,36 +97,162 @@
   max-width: 100%;
 }
 
-.card__wallpaper {
+.card__image {
   border-radius: var(--spacing-3);
   margin-bottom: var(--spacing-10);
   overflow: hidden;
   width: 100%;
 }
 
-.content {
+.card__content {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-8);
 }
 
-.content--title {
+.content__title {
   font-family: var(--ff-young);
   font-size: var(--fs-40);
   margin-bottom: var(--spacing-6);
 }
 
-.content--ingredients {
-  color: var(--color-stone-600);
-}
-
-.content__prepation {
+.content__prep {
   border-radius: 12px;
   padding: 24px;
   background-color: var(--color-rose-50);
 }
 
-.content--prepation--time {
+.content__prep-title {
   font-size: var(--fs-20);
   color: var(--color-rose-800);
+}
+
+.prep-list {
+  margin-top: 1rem;
+  padding-left: 24px;
+  color: var(--color-stone-600);
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.prep-list li::marker {
+  color: var(--color-rose-800);
+  width: 15px;
+  height: 24px;
+}
+
+.prep-list li p {
+  margin-left: 16px;
+}
+
+.content__section-title {
+  font-family: var(--ff-young);
+  font-size: var(--fs-28);
+  color: var(--color-brown-800);
+  margin-bottom: var(--spacing-6);
+  font-weight: 400;
+}
+
+.ingredient-list {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  color: var(--color-stone-600);
+}
+
+.ingredient-list li::marker {
+  width: 1rem;
+  color: var(--color-brown-800);
+}
+
+.ingredient-list li p {
+  margin-left: 1rem;
+}
+
+.instruction-list {
+  padding-left: var(--spacing-6);
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--spacing-2);
+  color: var(--color-stone-600);
+  margin: 0;
+}
+
+.instruction-list li::marker {
+  color: var(--color-brown-800);
+  width: 1rem;
+  font-weight: bold;
+}
+
+.instruction-list li p {
+  margin-left: 1rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-stone-100);
+  margin: 0;
+}
+
+.content__note {
+  color: var(--color-stone-600);
+  margin-bottom: var(--spacing-6);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0;
+  }
+
+  .card {
+    border-radius: 0px;
+    padding: 0;
+  }
+
+  .card__content {
+    padding: var(--spacing-10) var(--spacing-8);
+  }
+
+  .card__image {
+    border-radius: 0px;
+    margin-bottom: 0px;
+  }
+
+  .card__image img {
+    width: 100%;
+  }
+}
+
+.nutrition-table__row {
+  width: 100%;
+  padding: 0px var(--spacing-8);
+  border-bottom: 1px solid var(--color-stone-100);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+
+  padding-bottom: var(--spacing-3);
+  margin-bottom: var(--spacing-3);
+}
+
+.nutrition-table__label {
+  color: var(--color-stone-600);
+}
+
+.nutrition-table__value {
+  font-weight: bold;
+  color: var(--color-brown-800);
+}
+
+.nutrition-table__row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.content__description {
+  color: var(--color-stone-600);
 }
